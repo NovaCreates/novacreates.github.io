@@ -3,79 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Why I Love Look Bikes</title>
+  <title>Look Bikes Fan Site</title>
   <style>
-    /* Look signature red background with light text */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
     body {
-      background-color: #d80027; /* bright Look red */
-      color: #f2f2f2;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 10px;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #222;
+      line-height: 1.7;
     }
-    h1, h2 {
-      color: #fff;
-      letter-spacing: 1px;
+    header {
+      background: #FEDD00; /* signature yellow */
+      color: #D80027; /* signature red */
+      padding: 30px 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      box-shadow: 0 4px 8px rgba(216,0,39,0.3);
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 50px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    section:nth-child(odd) {
+      background: #D80027; /* red */
+      color: white;
+      flex-direction: row;
+    }
+    section:nth-child(even) {
+      background: #2C6EB8; /* blue */
+      color: white;
+      flex-direction: row-reverse;
     }
     img {
-      display: block;
-      max-width: 100%;
-      border-radius: 10px;
-      margin: 20px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      flex: 1;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+    article {
+      flex: 1;
+      padding: 25px 20px;
+    }
+    article h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+    article p {
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
     }
     a {
-      color: #fce205; /* bright yellow accent */
+      color: #FEDD00;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
     }
     a:hover {
-      text-decoration: underline;
+      border-bottom: 2px solid #FEDD00;
     }
     footer {
-      font-size: 0.8em;
-      margin-top: 40px;
-      color: #eeeeeecc;
-      border-top: 1px solid #ffffff44;
-      padding-top: 10px;
       text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+      font-weight: 300;
+      max-width: 900px;
+      margin: 0 auto 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Why I’m a Fan of Look Bikes</h1>
+  <header>Look Bikes Fan Site</header>
 
-  <img src="https://www.lookcycle.com/uploads/products/1/795blade_rs_press_release.png" alt="Look 795 Blade RS Bike" />
+  <main>
+    <section>
+      <img src="https://www.lookcycle.com/uploads/products/1/795blade_rs_press_release.png" alt="Look 795 Blade RS Bike" />
+      <article>
+        <h2>Why Look Rocks</h2>
+        <p>If you know your cycling gear, you already know Look. They revolutionized pedals with the clipless design way back in the 80s, and they've been pushing the boundaries of bike tech ever since.</p>
+        <p>Their carbon fiber bikes are insanely light yet tough, perfect for racers and road warriors. Plus, their designs have a bold but clean look that just screams precision and speed.</p>
+        <p>Every ride on a Look bike feels like a little victory.</p>
+      </article>
+    </section>
 
-  <h2>What Makes Look Special</h2>
-  <p>
-    If you’ve ever been around serious cyclists, you’ve probably heard of Look Cycle. They’re the folks behind the first clipless pedals—which changed the way we ride forever. Their designs are sleek, their tech is cutting edge, and they make bikes that feel fast and fun.
-  </p>
-  <p>
-    From winning Tour de France titles to everyday rides, Look’s bikes combine style with performance. Plus, their bikes often pop with bold colors and sharp lines, making them stand out in a crowd.
-  </p>
-
-  <img src="https://www.lookcycle.com/uploads/products/1/keotwin.png" alt="Look KEO Classic Pedals" />
-
-  <h2>A Quick Look at Their History</h2>
-  <p>
-    Founded in France back in the 1950s, Look Cycle has always been about innovation. Those clipless pedals I mentioned? That was their breakthrough moment in 1984. Today, their lightweight carbon fiber frames set the bar high for performance bikes.
-  </p>
-  <p>
-    Interested in seeing what they’re up to? Check out their official site — it’s packed with awesome gear and gear.  
-    <a href="https://www.lookcycle.com/" target="_blank" rel="noopener noreferrer">LookCycle.com</a>
-  </p>
+    <section>
+      <img src="https://www.lookcycle.com/uploads/products/1/keotwin.png" alt="Look KEO Classic Pedals" />
+      <article>
+        <h2>A Quick History</h2>
+        <p>Starting in the 1950s in France, Look's been a pioneer in cycling innovation. The clipless pedals they invented changed how we pedal forever – find your groove, clip in, and off you go.</p>
+        <p>Since then, their gear and bikes have snagged wins at top races around the globe, with riders loving their lightweight builds and cutting-edge design.</p>
+        <p>Curious to see their latest? Take a tour at <a href="https://www.lookcycle.com/" target="_blank" rel="noopener noreferrer">LookCycle.com</a> and explore!</p>
+      </article>
+    </section>
+  </main>
 
   <footer>
-    <p>
-      This is a fan-made project for school, not affiliated with Look Cycle International.<br/>
-      All images and trademarks belong to Look Cycle. Photos courtesy of  
-      <a href="https://www.lookcycle.com/" target="_blank" rel="noopener noreferrer">lookcycle.com</a>.
-    </p>
+    <p>Fan-made site for school — not affiliated with Look Cycle International.</p>
+    <p>All photos and trademarks belong to Look Cycle. Photos courtesy of <a href="https://www.lookcycle.com/" target="_blank" rel="noopener noreferrer">lookcycle.com</a>.</p>
   </footer>
 </body>
 </html>
