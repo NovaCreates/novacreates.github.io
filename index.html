@@ -1,123 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Look Bikes Fan Site</title>
+  <meta charset="UTF-8">
+  <title>California Scholarship Federation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- DEMO: Use Poppins as a modern fallback. Swap this for TT Firs Neue webfont files if licensed -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    :root {
+      --csf-blue: #2563eb;
+      --csf-yellow: #ffe028;
+      --csf-yellow-accent: #fffbe6;
+      --csf-shadow: 0 4px 26px rgba(37,99,235,0.09);
+    }
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fff;
-      color: #222;
-      line-height: 1.7;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: var(--csf-yellow-accent);
+      color: #21213e;
     }
     header {
-      background: #FEDD00; /* signature yellow */
-      color: #D80027; /* signature red */
-      padding: 30px 20px;
+      background: var(--csf-blue);
+      color: #fff;
+      padding: 45px 0 22px 0;
       text-align: center;
-      font-weight: 600;
-      font-size: 2.8rem;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      box-shadow: 0 4px 8px rgba(216,0,39,0.3);
+      letter-spacing: 0.01em;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -48px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170vw;
+      height: 80px;
+      background: var(--csf-yellow);
+      border-radius: 40%;
+      z-index: 2;
+    }
+    .logo {
+      width: 110px;
+      border-radius: 50%;
+      background: #fff;
+      padding: 8px;
+      box-shadow: var(--csf-shadow);
+      position: relative;
+      z-index: 3;
+    }
+    .org-title {
+      font-size: 2.35em;
+      margin: 14px 0 0 0;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      position: relative;
+      z-index: 3;
+    }
+    .subtitle {
+      font-size: 1.11em;
+      margin-top: 11px;
+      color: #ffe028;
+      font-weight: 500;
+      position: relative;
+      z-index: 3;
     }
     main {
       max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
+      margin: 0 auto 50px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: var(--csf-shadow);
+      padding: 36px 4vw 30px 4vw;
+      position: relative;
+      margin-top: -36px;
+      z-index: 10;
     }
     section {
-      margin-bottom: 50px;
-      border-radius: 15px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      overflow: hidden;
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: var(--csf-blue);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      font-size: 1.33em;
+      margin-top: 0;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 8px;
     }
-    section:nth-child(odd) {
-      background: #D80027; /* red */
-      color: white;
-      flex-direction: row;
+    .summary-paragraph {
+      font-size: 1.13em;
+      line-height: 1.6em;
+      margin-bottom: 0.5em;
     }
-    section:nth-child(even) {
-      background: #2C6EB8; /* blue */
-      color: white;
-      flex-direction: row-reverse;
+    .reflection-box, .event-box, .whs-box, .home-box {
+      background: var(--csf-yellow-accent);
+      border-radius: 10px;
+      padding: 20px 22px 18px 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 14px #d7deed17;
+      border-left: 7px solid var(--csf-yellow);
     }
-    img {
-      flex: 1;
-      max-width: 350px;
-      border-radius: 20px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    .img-event, .img-section-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 18px;
     }
-    article {
-      flex: 1;
-      padding: 25px 20px;
+    .img-col {
+      flex: 1 1 220px;
+      min-width: 200px;
+      text-align: center;
     }
-    article h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
+    .event-img, .whs-img {
+      width: 96%;
+      max-width: 320px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      border: 4px solid var(--csf-yellow);
+      box-shadow: 0 10px 38px #2563eb29;
     }
-    article p {
-      font-weight: 300;
-      font-size: 1.1rem;
-      margin-bottom: 12px;
+    .event-description, .whs-description {
+      flex: 2 1 350px;
+      font-size: 1.08em;
+      margin-left: 16px;
+      margin-right: 6px;
+      color: #183371;
     }
-    a {
-      color: #FEDD00;
-      font-weight: 600;
+    .whs-description {
+      margin-right: 0;
+    }
+    .home-box {
+      background: #fffbe6;
+      border-left: 7px solid #2563eb;
+      color: #21213e;
+    }
+    blockquote {
+      border-left: 6px solid var(--csf-blue);
+      background: #eff4ffcc;
+      font-style: italic;
+      color: #234da2;
+      font-size: 1.12em;
+      margin: 30px 0 14px 0;
+      padding-left: 15px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    a.csf-link {
+      color: var(--csf-blue);
+      background: var(--csf-yellow);
       text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom 0.3s ease;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 7px;
+      margin-left: 7px;
+      box-shadow: 0 1px 3px #ffe02825;
+      transition: background 0.2s;
     }
-    a:hover {
-      border-bottom: 2px solid #FEDD00;
+    a.csf-link:hover {
+      background: #ffe028e7;
+    }
+    .house-emoji {
+      font-size: 1.36em;
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+    @media (max-width: 900px) {
+      main { margin: 0 0 30px 0; }
+      .img-event, .img-section-row { flex-direction: column; }
+      .event-description, .whs-description { margin: 19px 0 0 0;}
     }
     footer {
+      margin: 54px 0 22px 0;
       text-align: center;
-      font-size: 0.85rem;
-      color: #777;
-      padding: 20px 0;
-      border-top: 1px solid #eee;
-      font-weight: 300;
-      max-width: 900px;
-      margin: 0 auto 40px;
+      font-size: 1.1em;
+      color: #a6b3c1;
+      letter-spacing: 0.01em;
     }
   </style>
 </head>
 <body>
-  <header>Look Bikes Fan Site</header>
-
+  <header>
+    <img src="CSF.jpeg" alt="California Scholarship Federation Logo" class="logo">
+    <div class="org-title">California Scholarship Federation</div>
+    <div class="subtitle">Academic Excellence · Community Service · Student Empowerment</div>
+  </header>
   <main>
     <section>
-      <img src="https://www.lookcycle.com/uploads/products/1/795blade_rs_press_release.png" alt="Look 795 Blade RS Bike" />
-      <article>
-        <h2>Why Look Rocks</h2>
-        <p>If you know your cycling gear, you already know Look. They revolutionized pedals with the clipless design way back in the 80s, and they've been pushing the boundaries of bike tech ever since.</p>
-        <p>Their carbon fiber bikes are insanely light yet tough, perfect for racers and road warriors. Plus, their designs have a bold but clean look that just screams precision and speed.</p>
-        <p>Every ride on a Look bike feels like a little victory.</p>
-      </article>
+      <h2>About California Scholarship Federation</h2>
+      <div class="summary-paragraph">
+        The California Scholarship Federation (CSF) is a nonprofit organization founded in 1921 that recognizes and encourages high scholastic achievement and community service among middle and high school students in California.
+      </div>
     </section>
 
     <section>
-      <img src="https://www.lookcycle.com/uploads/products/1/keotwin.png" alt="Look KEO Classic Pedals" />
-      <article>
-        <h2>A Quick History</h2>
-        <p>Starting in the 1950s in France, Look's been a pioneer in cycling innovation. The clipless pedals they invented changed how we pedal forever – find your groove, clip in, and off you go.</p>
-        <p>Since then, their gear and bikes have snagged wins at top races around the globe, with riders loving their lightweight builds and cutting-edge design.</p>
-        <p>Curious to see their latest? Take a tour at <a href="https://www.lookcycle.com/" target="_blank" rel="noopener noreferrer">LookCycle.com</a> and explore!</p>
-      </article>
+      <h2>How California Scholarship Federation Ties to Liberation</h2>
+      <div class="reflection-box">
+        I noticed liberation in my life when I found out about this club called CSF. CSF is a club that promotes unity and equality by engaging in meaningful community volunteer work, making a positive impact on our local area. This space makes me feel comfortable and involved because it’s somewhere I can truly experience freedom, empowerment, and equity. Everyone is treated fairly, and we all work together on projects that support others.
+        <br><br>
+        One thing I’ve learned is that liberation can start with small actions. In spaces that feel restrictive, I can call out unfair treatment and make sure I’m supportive of myself and those around me. Even little steps like these can help challenge oppression and create a more welcoming environment.
+        <br><br>
+        What inspires me most are our club leaders and CSF officers. They are role models who show us the importance of kindness, respect, and teamwork. Their positive attitudes and dedication encourage me to think differently and act in ways that help others. Being part of CSF reminds me that when people work together, it’s possible to build spaces where everyone has the chance to belong and succeed.
+      </div>
+      <blockquote>
+        "If you want to take away power from a group, the simplest way to do it is to separate them. If you can make them distrust each other, the work is done for you."<br>
+        — Trevor Noah, <em>Born a Crime</em>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>California Scholarship Federation Events</h2>
+      <div class="event-box img-event">
+        <div class="img-col">
+          <img src="IMG_2377.jpeg" alt="CSF Beach Cleanup at Seal Beach" class="event-img">
+        </div>
+        <div class="event-description">
+          This summer we hosted a beach clean up in our local area of Seal Beach, California. Events like this can help connect and strengthen communities, as well as push for sustainability and make a bigger global impact. Events like these help me understand more about how big a impact a community can do.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Whitney High School</h2>
+      <div class="whs-box img-section-row">
+        <div class="img-col">
+          <img src="WHS.jpeg" alt="Whitney High School Campus" class="whs-img">
+        </div>
+        <div class="whs-description">
+          Whitney High School strives to develop intrinsically motivated, collaborative learners who approach their education purposefully and creatively by taking ownership of their learning to become responsible, innovative global citizens. Whitney High School is a proud host of the CSF club and where I attend, and the club could not be possible without the help of WHS.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="house-emoji">🏠</span>Home</h2>
+      <div class="home-box">
+        At home, interpersonal liberation also comes into play. My family helps me out and always comforts me. My parents and family give me unwavering support. I could not have been where I am today without the help and support of my family members.
+      </div>
     </section>
   </main>
-
   <footer>
-    <p>Fan-made site for school — not affiliated with Look Cycle International.</p>
-    <p>All photos and trademarks belong to Look Cycle. Photos courtesy of <a href="https://www.lookcycle.com/" target="_blank" rel="noopener noreferrer">lookcycle.com</a>.</p>
+    &copy; 2025 CSF Club. Inspired by the California Scholarship Federation. <br>
+    Official CSF site:
+    <a class="csf-link" href="https://csf-cjsf.org/" target="_blank" rel="noopener">csf-cjsf.org</a>
   </footer>
 </body>
 </html>
